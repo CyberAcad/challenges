@@ -6,10 +6,10 @@
 
 ## Description
 
-Every file type has a **magic number** — the first few bytes that identify it regardless of the filename extension. Security analysts use these to detect files masquerading as something else.
+A file called `report.pdf` was found on a compromised web server. When the security team tried to open it, their PDF reader threw an error — the file wouldn't open.
 
-You intercepted a suspicious file on a compromised server. The filename says `report.pdf`, but your hex editor shows different magic bytes than expected.
+Something isn't right. The file claims to be a PDF, but it might be something else entirely.
 
-Examine the hex dump provided and identify **what file type the magic bytes actually indicate**.
+Use a hex editor like [hexed.it](https://hexed.it) to inspect the file's raw bytes and figure out what type of file it **actually** is.
 
 **Flag format:** `cyber{filetype}` (lowercase, common name)
