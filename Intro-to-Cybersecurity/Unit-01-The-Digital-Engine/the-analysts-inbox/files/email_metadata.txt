@@ -1,0 +1,27 @@
+=========================================
+  EMAIL GATEWAY — QUARANTINE LOG
+=========================================
+
+Message ID:   <8f3a2b1c@supp1ier-payments.com>
+Received:     2025-09-15 03:14:00 UTC
+Gateway Rule: QUARANTINED — attachment mismatch
+
+FROM:    invoices@supp1ier-payments.com
+TO:      accounts@yourcompany.com
+SUBJECT: URGENT — Overdue Invoice Attached
+
+--- ATTACHMENT ANALYSIS ---
+  Filename:       invoice.pdf
+  Declared type:  application/pdf
+  Actual size:    0x1F400 bytes
+  MD5 hash:       d41d8cd98f00b204e9800998ecf8427e
+
+  Magic bytes (first 4):  50 4B 03 04
+  Expected for PDF:       25 50 44 46  (%PDF)
+
+--- NOTES ---
+  The gateway flagged this attachment because the
+  declared file extension (.pdf) does not match
+  the actual magic bytes of the file.
+
+=========================================

@@ -1,0 +1,33 @@
+========================================
+  NETWORK INTRUSION DETECTION SYSTEM
+  Alert Summary — 2025-09-15
+========================================
+
+Three suspicious downloads flagged in the
+last hour from untrusted external IPs.
+
+------------------------------------------
+ ALERT #1
+   Time:        03:12:07 UTC
+   Source IP:    198.51.100.47
+   File:        /tmp/.cache_update
+   File Size:   4,096 bits
+------------------------------------------
+ ALERT #2
+   Time:        03:38:51 UTC
+   Source IP:    203.0.113.12
+   File:        /tmp/.sys_helper
+   File Size:   2 KiB
+------------------------------------------
+ ALERT #3
+   Time:        03:55:19 UTC
+   Source IP:    192.0.2.88
+   File:        /tmp/.fontcache
+   File Size:   12,288 bits
+------------------------------------------
+
+TASK: Convert all three file sizes to Bytes.
+      Which download is the LARGEST?
+      Submit its size in Bytes.
+
+========================================
