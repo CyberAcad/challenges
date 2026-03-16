@@ -32,7 +32,7 @@ challenges/
 ## 📝 Flag Format
 
 ```
-CyberAcad{flag_text_here}
+cyber{flag_text_here}
 ```
 
 ---
