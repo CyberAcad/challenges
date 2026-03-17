@@ -25,9 +25,3 @@
 =========================================
   END OF DUMP
 =========================================
-
-NOTES:
-  - The entry "0 */4 * * *" runs every 4 hours.
-  - /tmp/.cleanup.sh was added to root's crontab on 03/15.
-  - The file /tmp/.cleanup.sh is a hidden file (starts with a dot).
-  - Its permissions are: -rwx------ 1 root root 218 Mar 15 22:17
