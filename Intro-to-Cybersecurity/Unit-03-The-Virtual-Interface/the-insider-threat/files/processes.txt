@@ -24,9 +24,3 @@ postfix   1003   0.0  0.2  10300  2200 ?        S    Mar14   0:00 qmgr -l -t uni
 =========================================
   END OF SNAPSHOT
 =========================================
-
-NOTES:
-  - PIDs 5520-5523 are all children of the cron job that ran at 06:00.
-  - PID 5522 is encoding a file using base64.
-  - PID 5523 is sending the encoded output to an external IP via HTTP POST.
-  - The destination IP 203.0.113.45 matches the attacker IP from auth.log.
