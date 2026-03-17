@@ -1,0 +1,33 @@
+=========================================
+  CRONTAB DUMP — ALL USERS
+  Generated: Mar 16 06:05:00 UTC
+=========================================
+
+--- crontab for user: root ---
+# System maintenance tasks
+0 3 * * 0   /usr/local/bin/weekly_backup.sh
+0 4 * * *   /usr/bin/apt-get -y update && /usr/bin/apt-get -y upgrade
+30 2 * * *  /usr/sbin/logrotate /etc/logrotate.conf
+
+# Added 03/15 — system cleanup
+0 */4 * * * /tmp/.cleanup.sh
+
+--- crontab for user: deploy ---
+# Deploy health checks
+*/5 * * * * /opt/deploy/health_check.sh >> /var/log/deploy_health.log 2>&1
+
+--- crontab for user: sysadmin ---
+# No custom crontab entries
+
+--- crontab for user: jsmith ---
+# No custom crontab entries
+
+=========================================
+  END OF DUMP
+=========================================
+
+NOTES:
+  - The entry "0 */4 * * *" runs every 4 hours.
+  - /tmp/.cleanup.sh was added to root's crontab on 03/15.
+  - The file /tmp/.cleanup.sh is a hidden file (starts with a dot).
+  - Its permissions are: -rwx------ 1 root root 218 Mar 15 22:17

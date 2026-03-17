@@ -1,0 +1,29 @@
+Mar 15 01:12:03 prodserver sshd[4421]: Accepted publickey for deploy from 10.10.5.20 port 52301 ssh2
+Mar 15 02:00:01 prodserver CRON[4510]: pam_unix(cron:session): session opened for user root
+Mar 15 02:00:02 prodserver CRON[4510]: pam_unix(cron:session): session closed for user root
+Mar 15 08:45:11 prodserver sshd[4702]: Accepted password for sysadmin from 10.10.5.15 port 49822 ssh2
+Mar 15 09:30:44 prodserver sudo: sysadmin : TTY=pts/0 ; PWD=/home/sysadmin ; USER=root ; COMMAND=/usr/bin/apt update
+Mar 15 17:01:02 prodserver sshd[5011]: Disconnected from user sysadmin 10.10.5.15 port 49822
+Mar 15 22:14:07 prodserver sshd[5188]: Invalid user admin from 203.0.113.45 port 33201
+Mar 15 22:14:08 prodserver sshd[5188]: Failed password for invalid user admin from 203.0.113.45 port 33201 ssh2
+Mar 15 22:14:12 prodserver sshd[5190]: Invalid user administrator from 203.0.113.45 port 33205
+Mar 15 22:14:13 prodserver sshd[5190]: Failed password for invalid user administrator from 203.0.113.45 port 33205 ssh2
+Mar 15 22:14:18 prodserver sshd[5192]: Invalid user root from 203.0.113.45 port 33210
+Mar 15 22:14:19 prodserver sshd[5192]: Failed password for invalid user root from 203.0.113.45 port 33210 ssh2
+Mar 15 22:14:24 prodserver sshd[5194]: Invalid user test from 203.0.113.45 port 33215
+Mar 15 22:14:25 prodserver sshd[5194]: Failed password for invalid user test from 203.0.113.45 port 33215 ssh2
+Mar 15 22:14:30 prodserver sshd[5196]: Invalid user guest from 203.0.113.45 port 33220
+Mar 15 22:14:31 prodserver sshd[5196]: Failed password for invalid user guest from 203.0.113.45 port 33220 ssh2
+Mar 15 22:14:36 prodserver sshd[5198]: Failed password for jsmith from 203.0.113.45 port 33225 ssh2
+Mar 15 22:14:41 prodserver sshd[5200]: Failed password for jsmith from 203.0.113.45 port 33230 ssh2
+Mar 15 22:14:46 prodserver sshd[5202]: Failed password for jsmith from 203.0.113.45 port 33235 ssh2
+Mar 15 22:14:51 prodserver sshd[5204]: Accepted password for jsmith from 203.0.113.45 port 33240 ssh2
+Mar 15 22:15:03 prodserver sudo: jsmith : TTY=pts/1 ; PWD=/home/jsmith ; USER=root ; COMMAND=/usr/bin/crontab -e
+Mar 15 22:17:22 prodserver sudo: jsmith : TTY=pts/1 ; PWD=/tmp ; USER=root ; COMMAND=/bin/chmod +x /tmp/.cleanup.sh
+Mar 15 22:18:05 prodserver sudo: jsmith : TTY=pts/1 ; PWD=/tmp ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Mar 16 02:00:01 prodserver CRON[5401]: pam_unix(cron:session): session opened for user root
+Mar 16 02:00:02 prodserver CRON[5401]: (root) CMD (/tmp/.cleanup.sh)
+Mar 16 02:00:03 prodserver CRON[5401]: pam_unix(cron:session): session closed for user root
+Mar 16 06:00:01 prodserver CRON[5520]: pam_unix(cron:session): session opened for user root
+Mar 16 06:00:02 prodserver CRON[5520]: (root) CMD (/tmp/.cleanup.sh)
+Mar 16 06:00:03 prodserver CRON[5520]: pam_unix(cron:session): session closed for user root

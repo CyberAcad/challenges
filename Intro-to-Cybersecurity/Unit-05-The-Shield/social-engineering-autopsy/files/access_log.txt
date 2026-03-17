@@ -1,0 +1,30 @@
+=========================================
+  WEB SERVER ACCESS LOG
+  Host: corporate-security-verify.com
+  Recovered from attacker infrastructure
+=========================================
+
+185.199.44.12 - - [07/Mar/2026:18:25:01 +0000] "GET / HTTP/1.1" 200 0 "-" "Mozilla/5.0 (Testing)"
+185.199.44.12 - - [07/Mar/2026:18:30:15 +0000] "GET /login HTTP/1.1" 200 4521 "-" "Mozilla/5.0 (Testing)"
+185.199.44.12 - - [07/Mar/2026:18:32:44 +0000] "POST /login HTTP/1.1" 200 312 "-" "Mozilla/5.0 (Testing)"
+185.199.44.12 - - [08/Mar/2026:02:15:00 +0000] "GET /login HTTP/1.1" 200 4521 "-" "curl/7.88.1"
+66.102.9.31 - - [09/Mar/2026:08:10:22 +0000] "GET / HTTP/1.1" 200 1204 "-" "Mozilla/5.0 (compatible; Googlebot/2.1)"
+72.14.199.18 - - [09/Mar/2026:11:44:01 +0000] "GET /login?ref=m.chen HTTP/1.1" 200 4521 "https://mail.corporate.local/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122.0"
+72.14.199.18 - - [09/Mar/2026:11:44:33 +0000] "GET /static/logo.png HTTP/1.1" 200 15280 "https://corporate-security-verify.com/login?ref=m.chen" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+72.14.199.18 - - [09/Mar/2026:11:44:35 +0000] "GET /static/style.css HTTP/1.1" 200 2104 "https://corporate-security-verify.com/login?ref=m.chen" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+72.14.199.18 - - [09/Mar/2026:11:45:12 +0000] "POST /login HTTP/1.1" 302 0 "https://corporate-security-verify.com/login?ref=m.chen" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  >>> POST BODY CAPTURED: email=m.chen%40corporate.local&password=Tr0ub4dor%2199
+72.14.199.18 - - [09/Mar/2026:11:45:13 +0000] "GET /success HTTP/1.1" 200 892 "https://corporate-security-verify.com/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+185.199.44.12 - - [09/Mar/2026:12:01:05 +0000] "GET /admin/harvested HTTP/1.1" 200 1580 "-" "curl/7.88.1"
+185.199.44.12 - - [09/Mar/2026:14:30:00 +0000] "GET /admin/harvested HTTP/1.1" 200 1580 "-" "curl/7.88.1"
+
+=========================================
+  NOTES:
+  - Lines 1-4: Attacker testing the phishing site before launch.
+  - Line 5: Googlebot crawled the site (it was publicly accessible).
+  - Lines 6-10: The victim (m.chen) clicked the link, loaded the page,
+    and submitted credentials via POST.
+  - Lines 11-12: Attacker retrieving harvested credentials.
+  - The POST body shows URL-encoded values:
+      %40 = @       %21 = !
+=========================================

