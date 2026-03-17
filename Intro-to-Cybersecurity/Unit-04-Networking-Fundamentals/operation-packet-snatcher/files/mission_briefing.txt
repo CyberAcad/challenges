@@ -1,0 +1,63 @@
+╔══════════════════════════════════════════════╗
+║   OPERATION: PACKET SNATCHER                 ║
+║   CLASSIFICATION: TOP SECRET                 ║
+║   DATE: 2026-03-15 22:14 UTC                 ║
+╚══════════════════════════════════════════════╝
+
+SITUATION:
+  Agent CIPHER transmitted a secret message
+  across a 3-node covert network. We intercepted
+  it at the LAST node — but it's been mangled.
+
+THE NETWORK PATH:
+
+  ┌─────────┐       ┌─────────┐       ┌─────────┐
+  │ NODE A  │ ────► │ NODE B  │ ────► │ NODE C  │
+  │ (origin)│       │ (relay) │       │ (exit)  │
+  └─────────┘       └─────────┘       └─────────┘
+   Sends the        Applies           Applies
+   original         ROT13 to          REVERSE on
+   message          every letter      the whole string
+
+WHAT EACH NODE DID (in order):
+  1. Node A sent the original plaintext message
+  2. Node B received it → shifted every LETTER
+     13 places through the alphabet (ROT13)
+     → forwarded the result
+  3. Node C received it → reversed the ENTIRE
+     string backwards → stored the result
+
+INTERCEPTED AT NODE C:
+
+  ┌──────────────────────────────────┐
+  │                                  │
+  │         3gh0e_3p1a               │
+  │                                  │
+  └──────────────────────────────────┘
+
+YOUR MISSION:
+  Start at Node C and work BACKWARDS.
+  Undo each transformation in reverse order:
+
+     Step 1 → Undo Node C's operation
+     Step 2 → Undo Node B's operation
+
+  The result is the original message.
+
+  Your flag is: cyber{original_message}
+
+╔══════════════════════════════════════════════╗
+║   HINTS (if you're stuck):                   ║
+║                                              ║
+║   • "Reverse" means flip the string.         ║
+║     "hello" reversed = "olleh"               ║
+║                                              ║
+║   • ROT13 shifts each letter 13 spots.       ║
+║     a→n, b→o, c→p ... n→a, o→b, etc.        ║
+║     The cool thing: applying ROT13 TWICE     ║
+║     gives you back the original.             ║
+║     So to UNDO ROT13... just do ROT13 again. ║
+║                                              ║
+║   • Numbers, underscores, and symbols are    ║
+║     NOT changed by ROT13 — only letters.     ║
+╚══════════════════════════════════════════════╝
